@@ -1,0 +1,15 @@
+Build:
+docker build -t alireaza/openconnect .
+
+Run:
+docker run \
+--interactive \
+--tty \
+--rm \
+--env="url=SERVER" \
+--env="username=USERNAME" \
+--env="password=PASSWORD" \
+--publish="9052:9052" \
+--publish="9053:9053" \
+--name="openconnect" \
+alireaza/openconnect
