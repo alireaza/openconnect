@@ -1,5 +1,5 @@
 Build:
-docker build -t alireaza/openconnect .
+docker build --tag alireaza/openconnect:$(date -u +%Y%m%d) --tag alireaza/openconnect .
 
 Run:
 docker run \
