@@ -7,8 +7,8 @@ $ docker build --tag alireaza/openconnect:$(date -u +%Y%m%d) --tag alireaza/open
 ```
 
 ## Run
-SOCKS5:9052
+SOCKS5:1080
 ```bash
-$ docker run --interactive --tty --rm --env="url=SERVER" --env="username=USERNAME" --env="password=PASSWORD" --publish="9052:9052" --name="openconnect" alireaza/openconnect
+$ docker run --interactive --tty --rm --env="url=SERVER" --env="username=USERNAME" --env="password=PASSWORD" --publish="1080:1080" --name="openconnect" alireaza/openconnect
 ```
 

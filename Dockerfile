@@ -12,7 +12,7 @@ openconnect ocproxy \
 && apt-get autoremove -y \
 && rm -rf /var/lib/apt/lists/* /var/tmp/* /tmp/*
 
-EXPOSE 9052
+EXPOSE 1080
 
 CMD export cert="$(\
     yes no | \
@@ -24,6 +24,6 @@ CMD export cert="$(\
     openconnect \
     --servercert $cert \
     --script-tun \
-    --script "ocproxy -D 9052 -g" \
+    --script "ocproxy -D 1080 -g" \
     --user=$username \
     $url
